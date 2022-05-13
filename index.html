@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Hand Gestures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+        <!--https://teachablemachine.withgoogle.com/models/T3p1WGPc-/--->
+      <h3 class="btn btn-primary heading">GESTURE WEB APP
+        <br>
+
+        <span>👍</span>
+        <span>✌</span>
+        <span>🤞</span>
+        <span>🤘</span>
+        <span>🤙</span>
+        <span>🖐</span>
+        <span>👌</span>
+      </h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take a selfie of a gesture to know about it's meaning</p>
+      	<br>
+      <p style="font-size: 20px;"><b style="color: rgb(255, 255, 255)">On the following gestures the model is trained</b>
+        <br>
+        <b style="color: black">✌|👍|👌</b>
+        <br>
+      
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam View - </label>
+        <div id="camera"></div>
+        
+        <br><br>
+        <button class="btn btn-danger" onclick="take_snapshot()">Take Snapshot</button>
+        <br><br>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Prediction 1 - </label>
+        <h3 class="emotion_name" id="result_emotion_name"></h3>
+
+        <label>Hand Gesture - </label>
+        <h2 class="emoji" id="emoji"></h2>
+
+     
+	      <label>Confidence - </label>
+        <h3 class="emotion_name" id="confidence"></h3>
+
+      </div>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+
+        <br><br>
+        <button class="btn btn-success" onclick="start_identification()">Identify Image</button>
+        <br><br><br><br><br>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
